@@ -1,0 +1,31 @@
+{
+  "name": "hyperseek",
+  "version": "1.0.0",
+  "description": "A powerful and efficient web crawling library written in Rust that allows you to crawl web pages, extract URLs, and traverse the web with ease.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniel-Brai/HyperSeek.git"
+  },
+  "keywords": [
+    "WebCrawler",
+    "Rust",
+    "Crates"
+  ],
+  "author": "Daniel Brai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Daniel-Brai/HyperSeek/issues"
+  },
+  "homepage": "https://github.com/Daniel-Brai/HyperSeek#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3"
+  }
+}
