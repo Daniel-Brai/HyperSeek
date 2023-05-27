@@ -1,14 +1,19 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+use reqwest::{blocking::Client as SyncClient, Client as AsyncClient};
+use select::document::Document;
+use select::predicate::Name;
+use std::collections::{HashSet, VecDeque};
+use std::sync::{Arc, Mutex};
+use tokio::task::spawn;
+use url::Url;
+
+pub enum WebCrawlerMode {
+    Sync,
+    Async,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+pub struct WebCrawler {
+    visited_urls: Arc<Mutex<HashSet<String>>>,
+    urls_to_download: Arc<Mutex<VecDeque<String>>>,
+    max_depth: u32,
+    mode: WebCrawlerMode,
 }
