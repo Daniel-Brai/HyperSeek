@@ -6,14 +6,14 @@ use std::sync::{Arc, Mutex};
 use tokio::task::spawn;
 use url::Url;
 
-pub enum WebCrawlerMode {
+pub enum HyperSeekMode {
     Sync,
     Async,
 }
 
-pub struct WebCrawler {
+pub struct HyperSeek {
     visited_urls: Arc<Mutex<HashSet<String>>>,
     urls_to_download: Arc<Mutex<VecDeque<String>>>,
     max_depth: u32,
-    mode: WebCrawlerMode,
+    mode: HyperSeekMode,
 }
