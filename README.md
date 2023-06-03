@@ -11,3 +11,9 @@ Other feaures include:
 3. **Parallel Processing**: Enable concurrent processing of multiple URLs to improve crawling speed and efficiency. Utilize Rust's concurrency primitives to efficiently distribute crawling tasks across multiple threads or even across multiple machines.
 
 4. **Customizable Crawling Rules**: Allow users to define custom rules for crawling, such as specifying which domains to crawl, setting depth limits, or filtering URLs based on patterns or criteria.
+
+## Features Todo
+- [x] Implement Synchronous Web Crawling
+- [ ] Implement Asynchronous Web Crawling
+- [ ] Implement Robust Page Metadata gathering
+- [ ] Implement interface for user extensible rules
